@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>LOTERIAAAA</title> 
+</head> 
+<body> 
+    <style>
+        html{
+            background-color: rgb(209, 196, 181);
+        }
+        button{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background-color: rgba(90, 85, 79, 0.493);
+            color: rgb(109, 94, 94);
+            padding: 1%;
+        }
+        h1,p{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+    </style>
+    
+    <center> 
+        <h1 id="jkjk">LOTERIA:DDD</h1> 
+        <div id="image" display="none"> 
+            <img src="" alt="" width="410" height="650" id="img" display="none"> 
+            </img> 
+        </div><br> 
+        
+        <button onclick="atras()">Atrazzz</button> 
+        <button onclick="barajar()">Comenzar</button> 
+        <button onclick="siguiente()">Siguientee</button> 
+    </center> 
+</body> 
+
+<script> 
+let baraja = []; 
+let cont = 0; 
+
+function llenarBaraja(){ 
+    for(let a = 1; a < 55; a++){ 
+        baraja.push(a); 
+    } 
+    document.getElementById("img").style.display = "none";
+    updateMedia(); 
+    } 
+
+function barajar(){ 
+    cont=0
+    document.getElementById("img").style.display = "block";
+    baraja.sort(function() 
+    { return Math.random() - 0.5 }); 
+    console.log(baraja);
+    updateMedia() 
+    } 
+    
+function siguiente() { 
+    if (cont == 53) {
+        return;
+    }{ cont++; console.log({cont}); 
+        updateMedia(); } 
+        } 
+        
+function atras() { 
+    if (cont == 0) {
+        return;
+    } else { cont--; console.log({cont}); updateMedia(); } 
+    } 
+    
+function updateMedia(){ 
+    var img = document.getElementById("img"); img.src = baraja[cont] + ".jpg"; 
+    const audi = new Audio (baraja[cont] + ".mp3");
+            audi.play();
+    } 
+
+llenarBaraja(); 
+</script> 
+</html>
