@@ -41,6 +41,10 @@ let cont = 0;
 function llenarBaraja(){ 
     for(let a = 1; a < 55; a++){ 
         baraja.push(a); 
+        document.getElementById("img").style.display = "none";
+            const audi = new Audio (baraja[cont] + ".mp3");
+            audi.pause();
+    sound.currentTime = 0;
     } 
     updateMedia(); 
     } 
