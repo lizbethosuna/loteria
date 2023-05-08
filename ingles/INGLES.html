@@ -29,9 +29,11 @@
             </img> 
         </div><br> 
         
-        <button onclick="atras()" id="a">BACK</button> 
+        <div class="boton">
+        <button onclick="atras()" id="a" disabled="true">BACK</button> 
         <button onclick="barajar()">START</button> 
-        <button onclick="siguiente()" id="b">NEXTT</button> 
+        <button onclick="siguiente()" id="b" disabled="true">NEXTT</button> 
+        </div>
     </center> 
 </body> 
 
@@ -58,7 +60,8 @@ function barajar(){
     { return Math.random() - 0.5 }); 
     console.log(baraja);
     updateMedia() 
-    habi();
+    document.getElementById("a").disabled =false;
+    document.getElementById("b").disabled=false;
     } 
     
 function siguiente() { 
@@ -79,19 +82,7 @@ function updateMedia(){
     const audi = new Audio (baraja[cont] + ".mp3");
             audi.play();
     } 
-    function desa(){
-        const asd= getElementById('a');
-        asd.disabled = true;
-        const jkl= getElementById('b');
-        jkl.disabled = true;
-    
-    }
-        function habi(){
-        const asd= getElementById('a');
-        asd.disabled = false;
-        const jkl= getElementById('b');
-        jkl.disabled = false;
-    
-    }
 llenarBaraja(); 
-desa();
+</script>
+</body>
+</html>
