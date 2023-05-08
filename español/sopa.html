@@ -23,15 +23,17 @@
     </style>
     
     <center> 
-        <h1 id="jkjk">LOTERIAA EN ESPAÑOLL Xbb</h1> 
+        <h1 id="jkjk">LOTERIAAAA :DDD</h1> 
         <div id="image" display="none"> 
             <img src="" alt="" width="410" height="650" id="img" display="none"> 
             </img> 
         </div><br> 
         
-        <button onclick="atras()" id="a">ATRASS</button> 
+        <div class="boton">
+        <button onclick="atras()" id="a" disabled="true">ATRAZZZ</button> 
         <button onclick="barajar()">COMENZAR</button> 
-        <button onclick="siguiente()" id="b">ADELANTEE</button> 
+        <button onclick="siguiente()" id="b" disabled="true">SIGUIENTEEE</button> 
+        </div>
     </center> 
 </body> 
 
@@ -58,7 +60,8 @@ function barajar(){
     { return Math.random() - 0.5 }); 
     console.log(baraja);
     updateMedia() 
-    habi();
+    document.getElementById("a").disabled =false;
+    document.getElementById("b").disabled=false;
     } 
     
 function siguiente() { 
@@ -79,19 +82,7 @@ function updateMedia(){
     const audi = new Audio (baraja[cont] + ".mp3");
             audi.play();
     } 
-    function desa(){
-        const asd= getElementById('a');
-        asd.disabled = true;
-        const jkl= getElementById('b');
-        jkl.disabled = true;
-    
-    }
-        function habi(){
-        const asd= getElementById('a');
-        asd.disabled = false;
-        const jkl= getElementById('b');
-        jkl.disabled = false;
-    
-    }
 llenarBaraja(); 
-desa();
+</script>
+</body>
+</html>
