@@ -29,9 +29,9 @@
             </img> 
         </div><br> 
         
-        <button onclick="atras()">戻る</button> 
+        <button onclick="atras()" id="a">戻る</button> 
         <button onclick="barajar()">始める</button> 
-        <button onclick="siguiente()">次の</button> 
+        <button onclick="siguiente()" id="b">次の</button> 
     </center> 
 </body> 
 
@@ -43,11 +43,12 @@ function llenarBaraja(){
     for(let a = 1; a < 55; a++){ 
         baraja.push(a); 
     } 
-document.getElementById("img").style.display = "none";
+    document.getElementById("img").style.display = "none";
     const audi = new Audio (baraja[cont] + ".mp3");
             audi.pause();
-    sound.currentTime = 0;
+             sound.currentTime = 0;
     updateMedia(); 
+   
     } 
 
 function barajar(){ 
@@ -77,6 +78,14 @@ function updateMedia(){
     const audi = new Audio (baraja[cont] + ".mp3");
             audi.play();
     } 
+    function desa(){
+        const asd= getElementById('a');
+        asd.disabled = true;
+        const jkl= getElementById('b');
+        jkl.disabled = true;
+    
+    }
 llenarBaraja(); 
+desa();
 </script> 
 </html>
