@@ -58,6 +58,7 @@ function barajar(){
     { return Math.random() - 0.5 }); 
     console.log(baraja);
     updateMedia() 
+    habi();
     } 
     
 function siguiente() { 
@@ -85,7 +86,12 @@ function updateMedia(){
         jkl.disabled = true;
     
     }
+        function habi(){
+        const asd= getElementById('a');
+        asd.disabled = false;
+        const jkl= getElementById('b');
+        jkl.disabled = false;
+    
+    }
 llenarBaraja(); 
 desa();
-</script> 
-</html>
