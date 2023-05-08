@@ -23,15 +23,17 @@
     </style>
     
     <center> 
-        <h1 id="jkjk">LOTTERY IN JAPANESE Xbb</h1> 
+        <h1 id="jkjk">宝くじ :DDD</h1> 
         <div id="image" display="none"> 
             <img src="" alt="" width="410" height="650" id="img" display="none"> 
             </img> 
         </div><br> 
         
-        <button onclick="atras()" style="display : none;" id="a">戻る</button> 
+        <div class="boton">
+        <button onclick="atras()" id="a" disabled="true">戻る</button> 
         <button onclick="barajar()">始める</button> 
-        <button onclick="siguiente()" style="display : none;" id="b">次の</button> 
+        <button onclick="siguiente()" id="b" disabled="true">続く</button> 
+        </div>
     </center> 
 </body> 
 
@@ -58,8 +60,8 @@ function barajar(){
     { return Math.random() - 0.5 }); 
     console.log(baraja);
     updateMedia() 
-    document.getElementById("a").style.display ="block";
-    document.getElementById("b").style.display ="block";
+    document.getElementById("a").disabled =false;
+    document.getElementById("b").disabled=false;
     } 
     
 function siguiente() { 
@@ -81,4 +83,6 @@ function updateMedia(){
             audi.play();
     } 
 llenarBaraja(); 
-
+</script>
+</body>
+</html>
