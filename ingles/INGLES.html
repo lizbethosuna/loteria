@@ -29,9 +29,9 @@
             </img> 
         </div><br> 
         
-        <button onclick="atras()">Back</button> 
+        <button onclick="atras()" id="a">Back</button> 
         <button onclick="barajar()">Start</button> 
-        <button onclick="siguiente()">Next</button> 
+        <button onclick="siguiente()" id="b">Next</button> 
     </center> 
 </body> 
 
@@ -77,6 +77,14 @@ function updateMedia(){
     const audi = new Audio (baraja[cont] + ".mp3");
             audi.play();
     } 
+    function desa(){
+        const asd= getElementById('a');
+        asd.disabled = true;
+        const jkl= getElementById('b');
+        jkl.disabled = true;
+    
+    }
 llenarBaraja(); 
+desa(); 
 </script> 
 </html>
