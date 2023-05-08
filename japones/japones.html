@@ -29,9 +29,9 @@
             </img> 
         </div><br> 
         
-        <button onclick="atras()" id="a">戻る</button> 
+        <button onclick="atras()" style="display : none;" id="a">戻る</button> 
         <button onclick="barajar()">始める</button> 
-        <button onclick="siguiente()" id="b">次の</button> 
+        <button onclick="siguiente()" style="display : none;" id="b">次の</button> 
     </center> 
 </body> 
 
@@ -58,7 +58,8 @@ function barajar(){
     { return Math.random() - 0.5 }); 
     console.log(baraja);
     updateMedia() 
-    habi();
+    document.getElementById("a").style.display ="block";
+    document.getElementById("b").style.display ="block";
     } 
     
 function siguiente() { 
@@ -79,19 +80,5 @@ function updateMedia(){
     const audi = new Audio (baraja[cont] + ".mp3");
             audi.play();
     } 
-    function desa(){
-        const asd= getElementById('a');
-        asd.disabled = true;
-        const jkl= getElementById('b');
-        jkl.disabled = true;
-    
-    }
-        function habi(){
-        const asd= getElementById('a');
-        asd.disabled = false;
-        const jkl= getElementById('b');
-        jkl.disabled = false;
-    
-    }
 llenarBaraja(); 
-desa();
+
